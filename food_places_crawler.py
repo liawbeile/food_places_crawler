@@ -15,6 +15,7 @@ for view_all in search_results.find('div', class_='ndElDd'):
 # ! AttributeError: 'NoneType' object has no attribute 'find', to resolve
 
 
+
     # request the URL of 'View all'
     for link in view_all.find('a'):
         food_places_page=req.get(link.get('href')) 
@@ -25,3 +26,4 @@ for view_all in search_results.find('div', class_='ndElDd'):
             for food_info in food_place.find_all('div', class_='cXedhc uQ4NLd'): # filter text
                 print(food_info.find('ellip').text)
                 print(food_info.find('rllt__details').text)
+
